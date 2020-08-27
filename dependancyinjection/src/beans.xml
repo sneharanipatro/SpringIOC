@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    
+<!-- SETTER INJECTION
+
+<bean id="std" class="com.sneha.di.Student">
+    <property name="stdName" value="doxy"></property>
+    <property name="id" value="1002"></property>
+</bean>
+
+<bean id="x" class="com.sneha.di.Student">
+    <property name="stdName" value="dora"></property>
+    <property name="id" value="1001"></property>
+</bean>
+ -->
+ <bean id="std" class="com.sneha.di.Student">
+     <constructor-arg name="stdName" value="dora"></constructor-arg>
+     <constructor-arg name="id" value="1001"></constructor-arg>
+ </bean>
+ <bean id="x" class="com.sneha.di.Student">
+      <constructor-arg name="id" value="100"/>
+ </bean>
+
+</beans>
